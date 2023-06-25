@@ -1,0 +1,32 @@
+Idee Micro-study
+
+
+=====IDEE=====
+
+last one of the examples: "create a mini-knowledge base on a specific domain (football, Roland-Garros...) and use CAN (last lab work) to propose interactive dialogues"
+
+specific domain: prendre un truc vrmt simple, qui a du potentiel pour répondre à un vrai pb
+Idee: manger quoi sur le plateau
+Knowledge base existante: les options (Franprix, WAN, Crous ENSAE, Food Asia, 19, etc)
+Contraintes: goûts, argent, diète, taille de la faim, CB, argent sur le compte WAN, argent sur le compte Izly.
+(nb de contraintes fini et choix fermés si trop dur de faire du NLP)
+initial_situation: le user renseigne à quel point il a faim, à quel point il veut économiser
+actions: les options de resto
+default: les goûts du user sont les goûts moyens, il s'en fout un peu de la diète, il a sa CB, il a de l'argent sur son compte WAN, il a de l'argent sur Izly
+causal clauses: faut de l'argent sur Izly pour le Crous, faut pas vouloir économiser pour aller au 19, c'est un peu de travail de remettre de l'argent sur Izly, etc
+utiliser des 'incompatible' (voir rel_pollock.pl) ?
+
+revoir le TP4 pour voir dans quelle mesure c'est possible de faire un dialogue "intéractif"
+une knowledge base existante sur un sujet, le user explique son cas (agrandit la knowledge base) (avec des assert), le programme prend une décision, demande au user si ça lui convient, si oui fini, si non le user explique pourquoi ça lui convient pas (complète la knowledge base), encore, jusqu'à ce que le user soit content
+Difficulté: comment le user communique: NL et faire du NLP (demander à Alex Elenter) ? directement un predicat? questions fermées?
+
+
+=====RAPPORT=====
+
+Method: faire plein de sous-parties pour faire genre qu'il y a du travail
+
+Results: bien tout montrer pour faire genre qu'il y a de la quantité
+
+Discussion: bien développer pour faire genre qu'il y a de la réflexion
+
+Bibliography: pas se casser la tête (c ne rien mettre, c mettre le lien du cours) (demandé)
