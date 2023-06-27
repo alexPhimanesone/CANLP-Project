@@ -55,7 +55,8 @@ Interface with the domain knowledge
 	/* Domain knowledge starts here                   */
 	/*------------------------------------------------*/
 
-	:- consult('rel_doors.pl').
+	:- consult('rel_lunch.pl').
+	% :- consult('rel_doors.pl').
 	% :- consult('rel_portes.pl').
 	% :- consult('energy.pl').
 	% :- consult('rel_projector.pl').
