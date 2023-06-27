@@ -20,6 +20,10 @@ revoir le TP4 pour voir dans quelle mesure c'est possible de faire un dialogue "
 une knowledge base existante sur un sujet, le user explique son cas (agrandit la knowledge base) (avec des assert), le programme prend une décision, demande au user si ça lui convient, si oui fini, si non le user explique pourquoi ça lui convient pas (complète la knowledge base), encore, jusqu'à ce que le user soit content
 Difficulté: comment le user communique: NL et faire du NLP (demander à Alex Elenter) ? directement un predicat? questions fermées?
 
+idée ouverture:
+réducteur d'avoir un nombre fini de possibilités pour la faim, l'argent dépensé, le goût
+dire que 'manger vite' ou 'prendre son temps' renvoie parfois à plus que la vitesse du repas dans le langage courant, parfois ça renvoie aussi à si c'est bon, si c'est copieux, si c'est agréable, etc (réel complexe, plein de critères interconnectés, difficile à modéliser)
+choix subjectifs dans la modélisation (intensité des conflits, causal clauses)
 
 =====RAPPORT=====
 
