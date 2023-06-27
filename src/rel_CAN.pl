@@ -22,20 +22,37 @@ Module principal
 :- consult('rel_util.pl').	% chargement d'utilitaires
 %%%  Alternative:   :- consult('rel_util_full.pl').	% chargement d'utilitaires si le systeme graphique est present
 
-:- tl(4).	% Sets trace level. Defined in 'rel_util0', but not in 'rel_util' where trace level is determined from within a window
+:- tl(1).	% Sets trace level. Defined in 'rel_util0', but not in 'rel_util' where trace level is determined from within a window
 
 
 % qsave_program('paradise',[goal=go,autoload=true, stand_alone=true]).
 
 	go :-
 		w_init_world,	% all predicates prefixed with w_ are in 'rel_world.pl'
+		
+		% Ask questions
+		talk(['Are you short on time? Enter ''1'' for YES or ''0'' for NO, followed by ''.''']),
+		read(N0),
+		integer(N0),
+		!,
+		asserta(initial_situation(short(N0))),
+		talk(['How much are you hungry? Enter 1, 2, or 3 followed by ''.''']),
+		read(N1),
+		integer(N1),
+		!,
+		asserta(initial_situation(hungry(N1))),
+
 		retractall(strength(_,_)),
 		retractall(prefer(_,_)),
 		findall((T, N), (preference(T, N), assert(prefer(T,N)), want(T, N)), _),	% stores preferences as necessities
 		w_update,	
 		w_propagate,	% draws inferences from preferences
 		display_memory,
-		start.
+		start,
+
+		% Retract answers
+		retract(initial_situation(short(N0))),
+		retract(initial_situation(hungry(N1))).
 
 	/*------------------------------------------------*/
 	/* 'start' looks for waiting wishes, then         */
